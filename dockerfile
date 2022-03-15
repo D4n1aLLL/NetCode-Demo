@@ -3,7 +3,7 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0.15-focal as base
 
 #COPY ["./dotMemory/", "/app/"]
-#RUN apt-get update && apt-get install -y libc6-dev && apt-get install -y libgdiplus
+RUN apt-get update && apt-get install -y libc6-dev && apt-get install -y libgdiplus
 WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0.406-focal AS build
